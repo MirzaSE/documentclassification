@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+
+
+
+
+ 
+
+<h1>Document Classification API</h1>
+
+ 
+
+<script type="text/javascript" language="javascript">
+
+ 
+
+function send()
+{
+	const proxyurl = "https://cors-anywhere.herokuapp.com/";
+	 var inputVal = document.getElementById("text").value;
+	 
+    var apiUrl = 'https://zdsubkgqma.execute-api.us-east-1.amazonaws.com/default/documentType?Document=';
+    fetch(proxyurl + apiUrl + inputVal, {
+		method: 'GET', // or 'PUT'
+		headers: {
+		'Content-Type': 'application/json',
+		'Access-Control-Allow-Origi': '*',
+	}
+	})
+	.then(response => {
+      return response.json();
+    }).then(data => {
+	
+	var obj = JSON.parse(data);
+   
+    
+    document.getElementById("result_div").innerHTML = "Document Type: " + obj.Name + "<br>" + "<br>" + "Precision: "  + obj.Score;
+    
+      // Work with JSON data here
+      
+      
+      console.log(data);
+    }).catch(err => {
+      // Do something for an error here
+    });
+}
+
+</script> 
+
+  <input id="text" type="text" value="" style="Width:20%" placeholder="Paste OCR document here..."/> 
+  <button onclick="javascript:send()">Submit</button> 
+
+<p>Results</p>   
+ 
+ <div id="result_div"> </div>
+ </div>
+ 
+
+</body>
+</html>

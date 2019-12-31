@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Terraform", "Terraform", "{5E4D8888-065A-4F30-A7F9-DEBF98D7AC91}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{F169D699-D380-4548-AE9B-B4E9593FAC72}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Comprehend", "Comprehend", "{BB2068A7-6BE9-4B23-9AA7-BD2A4F8E48CB}"
+	ProjectSection(SolutionItems) = preProject
+		Terraform\Comprehend\main.tf = Terraform\Comprehend\main.tf
+		Terraform\Comprehend\outputs.tf = Terraform\Comprehend\outputs.tf
+		Terraform\Comprehend\variables.tf = Terraform\Comprehend\variables.tf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "modules", "modules", "{D1514D8C-36C7-4ED5-BBEA-0723FF727BA1}"
+	ProjectSection(SolutionItems) = preProject
+		Terraform\API\main.tf = Terraform\API\main.tf
+		Terraform\API\outputs.tf = Terraform\API\outputs.tf
+		Terraform\API\variables.tf = Terraform\API\variables.tf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vpc", "vpc", "{F1027C11-3172-437E-B2E4-291221A7A171}"
+	ProjectSection(SolutionItems) = preProject
+		Terraform\API\modules\vpc\main.tf = Terraform\API\modules\vpc\main.tf
+		Terraform\API\modules\vpc\outputs.tf = Terraform\API\modules\vpc\outputs.tf
+		Terraform\API\modules\vpc\variables.tf = Terraform\API\modules\vpc\variables.tf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lambda", "lambda", "{483E0538-B07C-48CB-973C-76D6D39EBD24}"
+	ProjectSection(SolutionItems) = preProject
+		Terraform\API\modules\lambda\main.tf = Terraform\API\modules\lambda\main.tf
+		Terraform\API\modules\lambda\outputs.tf = Terraform\API\modules\lambda\outputs.tf
+		Terraform\API\modules\lambda\variables.tf = Terraform\API\modules\lambda\variables.tf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{DF88F9BF-F804-4424-8F85-89587096D7EF}"
+	ProjectSection(SolutionItems) = preProject
+		Terraform\API\modules\api\main.tf = Terraform\API\modules\api\main.tf
+		Terraform\API\modules\api\outputs.tf = Terraform\API\modules\api\outputs.tf
+		Terraform\API\modules\api\variables.tf = Terraform\API\modules\api\variables.tf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dist", "dist", "{BF3D34E0-7EE1-4DFA-A0B2-4001676C2CF8}"
+	ProjectSection(SolutionItems) = preProject
+		Terraform\API\dist\AWSLambda1.zip = Terraform\API\dist\AWSLambda1.zip
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeavyWater.DocumentClassificator", "HeavyWater.DocumentClassificator\HeavyWater.DocumentClassificator.csproj", "{57ED78DC-E338-4962-ADED-C8457A8DBDAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57ED78DC-E338-4962-ADED-C8457A8DBDAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57ED78DC-E338-4962-ADED-C8457A8DBDAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57ED78DC-E338-4962-ADED-C8457A8DBDAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57ED78DC-E338-4962-ADED-C8457A8DBDAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F169D699-D380-4548-AE9B-B4E9593FAC72} = {5E4D8888-065A-4F30-A7F9-DEBF98D7AC91}
+		{BB2068A7-6BE9-4B23-9AA7-BD2A4F8E48CB} = {5E4D8888-065A-4F30-A7F9-DEBF98D7AC91}
+		{D1514D8C-36C7-4ED5-BBEA-0723FF727BA1} = {F169D699-D380-4548-AE9B-B4E9593FAC72}
+		{F1027C11-3172-437E-B2E4-291221A7A171} = {D1514D8C-36C7-4ED5-BBEA-0723FF727BA1}
+		{483E0538-B07C-48CB-973C-76D6D39EBD24} = {D1514D8C-36C7-4ED5-BBEA-0723FF727BA1}
+		{DF88F9BF-F804-4424-8F85-89587096D7EF} = {D1514D8C-36C7-4ED5-BBEA-0723FF727BA1}
+		{BF3D34E0-7EE1-4DFA-A0B2-4001676C2CF8} = {D1514D8C-36C7-4ED5-BBEA-0723FF727BA1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD99F9A2-9991-4A6A-AB08-ECE82BA1E4FE}
+	EndGlobalSection
+EndGlobal
