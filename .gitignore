@@ -259,3 +259,7 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/Terraform/API/.terraform
+/Terraform/API/terraform.tfstate.backup
+/Terraform/API/terraform.tfstate
+/Terraform/API/.terraform.tfstate.lock.info

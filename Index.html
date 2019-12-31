@@ -7,8 +7,8 @@
             const proxyurl = "https://cors-anywhere.herokuapp.com/";
             var inputVal = document.getElementById("text").value;
 
-            var apiUrl = 'https://zdsubkgqma.execute-api.us-east-1.amazonaws.com/default/documentType?Document=';
-            fetch(proxyurl + apiUrl + inputVal, {
+            var apiUrl = 'https://zdsubkgqma.execute-api.us-east-1.amazonaws.com/default';
+            fetch(proxyurl + apiUrl + "/documentType?Document="+ inputVal, {
                 method: 'GET', // or 'PUT'
                 headers: {
                     'Content-Type': 'application/json',
