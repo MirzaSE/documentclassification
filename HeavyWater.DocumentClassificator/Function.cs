@@ -19,9 +19,7 @@ namespace HeavyWater.DocumentClassificator
         /// <param name="context"></param>
         /// <returns></returns>
         public string FunctionHandler(JObject input, ILambdaContext context)
-        {
-
-            LambdaLogger.Log("Input us " + input.ToString() + " end input");
+        {            
             AmazonComprehendClient comprehendClient = new AmazonComprehendClient(Amazon.RegionEndpoint.USEast1);
 
             var detectEntitiesRequest = new ClassifyDocumentRequest()
